@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Georgia', sans-serif;
 }
@@ -12,6 +16,7 @@ body {
 
 .row {
   height: 100%;
+  margin: 0 15px;
 }
 
 .row::before, .row::after {
@@ -76,9 +81,13 @@ header {
 
 /* About */
 
+.about {
+  min-height: 710px;
+  margin: 60px 0;
+}
+
 .about_header {
   text-align: center;
-  margin-top: 78px;
 }
 
 .about_header img {
@@ -89,14 +98,18 @@ header {
   color: #444343;
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .about_header h2 {
   color: #444343;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+.about_header h2:last-child {
+  font-size: 60px;
 }
 
 .about_content {
@@ -121,4 +134,14 @@ header {
 .about_content p {
   margin-top: 10px;
   line-height: 25px;
+}
+
+/* Projects */
+
+.projects {
+  min-height: 800px;
+  background-image: url('../images/projects_bg.png');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto;
 }

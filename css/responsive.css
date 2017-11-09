@@ -1,0 +1,37 @@
+@media only screen and (max-width: 991px) {
+
+  [class*="col-"] {
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+}
+
+
+@media only screen and (max-width: 575px) {
+
+.about {
+  margin-top: 30px;
+}
+
+.about_header h3 {
+  font-size: 18px;
+}
+
+.about_header h2 {
+  font-size: 20px;
+}
+
+.about_header h2:last-child {
+  font-size: 40px;
+}
+}
