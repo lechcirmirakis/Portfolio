@@ -136,12 +136,57 @@ header {
   line-height: 25px;
 }
 
+.about_icons {
+
+  font-size: 80px;
+  color: #444343;
+}
+
+.about_icons .text_box {
+  text-align: center;
+  color: green;
+}
+
 /* Projects */
 
 .projects {
   min-height: 800px;
+  padding: 60px 0;
   background-image: url('../images/projects_bg.png');
   background-repeat: repeat-x;
   background-position: center;
   background-size: auto;
+}
+
+.projects_header {
+  text-align: center;
+  color: #444343;
+  font-size: 30px;
+  font-weight: 500;
+
+}
+
+.project_content {
+  margin-top: 60px;
+}
+
+.projects_box {
+  width: 280px;
+  height: 280px;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+
+}
+
+.bg_01 {
+  background-image: url('../images/pro_01.jpg');
+}
+
+.bg_02 {
+  background-image: url('../images/pro_02.jpg');
+}
+
+.bg_03 {
+  background-image: url('../images/pro_03.jpg');
 }
