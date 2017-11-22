@@ -146,21 +146,35 @@ body {
                 width: 50px;
                 height: 3px;
                 background-color: #000;
-                margin: 7px 0;
+                margin-bottom: 25px;
             }
-            > h3 {
+
+            h2 {
+                font-size: 1.4em;
+                span {
+                    font-size: 0.33em;
+                }
+            }
+            h4 {
                 font-size: 0.55em;
+                margin-top: 20px;
             }
-            > p {
-                font-size: 0.5em;
-                line-height: 18px;
+            p {
+                font-size: 0.6em;
+                line-height: 22px;
+                span {
+                    color: $color_yel;
+                }
+            }
+            p:nth-child(5) {
+                margin-top: 15px;
+                font-size: 0.7em;
             }
         }
     }
 }
 
 .img_box {
-  font-family: 'Raleway', sans-serif;
   position: relative;
   display: inline-block;
   overflow: hidden;
