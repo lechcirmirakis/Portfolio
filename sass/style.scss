@@ -3,6 +3,7 @@
 $color_yel: #dbd100;
 $color_org: #ca8210;
 $color_blc: #262626;
+$color_gry: #9b9b9b;
 
 
 body {
@@ -83,7 +84,7 @@ body {
         .project_btn:active,
         .project_btn:visited,
          {
-            color: #A9ADB0;
+            color: $color_gry;
         	font-size: 0.7em;
         	background: transparent;
         	transition: all 500ms;
@@ -110,7 +111,6 @@ body {
 /* PROJECTS ----------------------------------------------------------- */
 
 .projects {
-    min-height: 300px;
     background-color: #e2dfdc;
     margin: 50px 0;
     color: $color_blc;
@@ -120,7 +120,7 @@ body {
         justify-content: center;
         margin: 30px 0 45px 0;
         h2 {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -178,6 +178,53 @@ body {
         }
 
     }
+}
+
+.contact {
+    background-color: #202020;
+    color: $color_gry;
+
+    .contact_header {
+        display: flex;
+        justify-content: center;
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+.contact_content {
+    display: flex;
+
+    .contact_form {
+        margin: 0 20px;
+
+        input,
+        textarea {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: none;
+            background-color: #282828;
+            outline: 0;
+            color: $color_gry;
+        }
+
+        textarea {
+            resize: none;
+            height: 200px;
+        }
+
+        input::placeholder, textarea::placeholder {
+          color: $color_gry;
+        }
+        input:focus, textarea:focus {
+          font-weight: 600;
+          border-left: 5px solid $color_yel;
+          background-color: rgba(40, 40, 40, 0.7);
+        }
+    }
+}
 }
 
 .img_box {
