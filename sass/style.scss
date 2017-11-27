@@ -7,13 +7,19 @@ $color_gry: #9b9b9b;
 
 
 body {
-    font-family: 'Spectral SC', serif;
+    font-family: 'Barlow Condensed', sans-serif;
     background-color: #e2dfdc;
 }
 /* FLEX BOX GRID */
 
 .half {
     flex-basis: 50%;
+}
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background-color: #262626;
 }
 
 /* ----------------- Header ----------------------------------------------- */
@@ -124,12 +130,6 @@ body {
         }
     }
 
-    .underline {
-        width: 100%;
-        height: 1px;
-        background-color: #262626;
-    }
-
     .project_content {
         display: flex;
         margin: 20px 8px 0px 10px;
@@ -183,12 +183,15 @@ body {
 .contact {
     background-color: #202020;
     color: $color_gry;
+    padding-bottom: 50px;
 
     .contact_header {
         display: flex;
         justify-content: center;
+        text-align: center;
         h2 {
             font-size: 2.5rem;
+            margin: 50px 0;
         }
     }
 
@@ -225,6 +228,53 @@ body {
         }
     }
 }
+
+    .contact_about {
+        display: flex;
+        flex-direction: column;
+
+        .about_me {
+            display: flex;
+
+            .about_me_img {
+                padding: 0 15px 15px 15px;
+                flex-basis: 40%;
+
+            }
+
+
+            .about_me_content {
+                flex-basis: 60%;
+
+                h3 {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .about_adress {
+            padding-left: 15px;
+            margin-top: 25px;
+        }
+    }
+}
+
+.footer {
+    background-color: #202020;
+    color: $color_gry;
+
+    .underline {
+        background-color: $color_gry;
+    }
+
+    .footer_content {
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: $color_yel;
+        }
+    }
 }
 
 .img_box {
@@ -415,7 +465,13 @@ body {
         flex-basis: 100%;
     }
 
+    .contact_content {
+        flex-direction: column;
+    }
+
 }
+
+
 
 @media screen and (max-width: 350px) {
     .projects {
