@@ -7,7 +7,7 @@ $(document).ready(function() {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
-            }, 800);
+            }, 500);
         }
     });
 
@@ -28,5 +28,65 @@ $(document).ready(function() {
             });
         }
     });
+
+    // form validation
+
+    // name input
+    $('#name').on('blur', function() {
+      var input = $(this);
+      var name_length = input.val().length;
+      if (name_length >= 3 && name_length <= 50) {
+          input.removeClass('invalid').addClass('valid');
+          input.next('.statement').text('').removeClass('error').addClass('ok');
+      } else {
+          input.removeClass('valid').addClass('invalid');
+          input.next('.statement').text('Wprowadź poprawne imię i nazwisko.').removeClass('ok').addClass('error');
+      }
+  });
+
+    // email input
+    $('#email').on('blur', function() {
+        var input = $(this);
+        var email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        var is_email = email.test(input.val());
+        if (is_email) {
+            input.removeClass('invalid').addClass('valid');
+            input.next('.statement').text('').removeClass('error').addClass('ok');
+        } else {
+            input.removeClass('valid').addClass('invalid');
+            input.next('.statement').text('Wprowadź prawidłowy adress email.').removeClass('ok').addClass('error');
+        }
+    });
+
+    // message input
+    $('#message').on('blur', function() {
+        var input = $(this);
+        var message = $(this).val();
+        if (message) {
+            input.removeClass('invalid').addClass('valid');
+            input.next('.statement').text('').removeClass('error').addClass('ok');
+        } else {
+            input.removeClass('valid').addClass('invalid');
+            input.next('.statement').text('Wiadomość nie może być pusta!').removeClass('ok').addClass('error');
+        }
+    });
+
+    // submit button validation
+    $('#submit').click(function() {
+        var name = $('#name');
+        var email = $('#email');
+        var message = $('#message');
+        var input = $(this);
+
+        if (name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')) {
+            event.preventDefault();
+            input.next('.statement').text('').removeClass('error').addClass('ok');
+            alert('Wiadomosc zostala wyslana prawidłowo');
+        } else {
+            event.preventDefault();
+            input.next('.statement').text('Jeśli chcesz wysłac formularz, wypełnij wszystkie pola').removeClass('ok').addClass('error');
+        }
+    });
+
 
 });

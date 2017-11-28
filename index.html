@@ -142,12 +142,20 @@
                 </h2>
             </div>
             <div class="contact_content">
+
                     <form data-animate="fadeInLeft" class="contact_form half">
-                        <input type="text" placeholder="Imię i Nazwisko">
-                        <input type="email" placeholder="Adres email">
-                        <input type="text" placeholder="Nazwa firmy">
-                        <textarea name="massage" placeholder="Twoja wiadomość"></textarea>
-                        <input class="contact_btn" type="submit" value="Wyślij">
+
+                        <input type="text" id="name" placeholder="Imię i Nazwisko">
+                        <span class="statement"></span>
+                        <input type="email" id="email" placeholder="Adres email">
+                        <span class="statement"></span>
+                        <input type="text" id="company" placeholder="Nazwa firmy">
+                        <span class="statement"></span>
+                        <textarea name="message" id="message" placeholder="Twoja wiadomość"></textarea>
+                        <span class="statement"></span>
+                        <input type="button" id="submit" value="Wyślij">
+                        <span class="statement"></span>
+
                       </form>
 
                 <div data-animate="fadeInRight" class="contact_about half">
