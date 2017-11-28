@@ -9,7 +9,7 @@
  */
 
 .animated {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 
@@ -19,6 +19,10 @@
 }
 
 .animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated_2.infinite {
   animation-iteration-count: infinite;
 }
 
