@@ -11,31 +11,22 @@ $(document).ready(function() {
         }
     });
 
-    // Fade down css animation
-    $('.down').each(function(){
-      $(this).viewportChecker({
-        classToAdd: 'show animated_2 zoomInDown',
-        classToRemove: 'hide',
-        offset: '10%'
-      });
-    });
+    // fade in css animations
+    $('*[data-animate]').addClass('hide').each(function() {
 
-    // Fade left css animation
-    $('.left').addClass('hide').each(function(){
-      $(this).viewportChecker({
-        classToAdd: 'show animated fadeInLeft',
-        classToRemove: 'hide',
-        offset: '20%'
-      });
-    });
-
-    // Fade left css animation
-    $('.right').addClass('hide').each(function(){
-      $(this).viewportChecker({
-        classToAdd: 'show animated fadeInRight',
-        classToRemove: 'hide',
-        offset: '20%'
-      });
+        if ($(this).data('animate') === "zoomInDown") {
+            $(this).viewportChecker({
+                classToAdd: 'show animated_2 ' + $(this).data('animate'),
+                classToRemove: 'hide',
+                offset: '20%'
+            });
+        } else {
+            $(this).viewportChecker({
+                classToAdd: 'show animated ' + $(this).data('animate'),
+                classToRemove: 'hide',
+                offset: '20%'
+            });
+        }
     });
 
 });
