@@ -79,7 +79,6 @@ $(document).ready(function() {
         var input = $(this);
 
         if (name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')) {
-            event.preventDefault();
             input.next('.statement').text('').removeClass('error').addClass('ok');
             alert('Wiadomosc zostala wyslana prawidłowo');
         } else {
@@ -87,6 +86,5 @@ $(document).ready(function() {
             input.next('.statement').text('Jeśli chcesz wysłac formularz, wypełnij wszystkie pola').removeClass('ok').addClass('error');
         }
     });
-
 
 });
