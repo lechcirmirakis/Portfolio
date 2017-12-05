@@ -23,7 +23,7 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = 'lech.cirmirakis@go2.pl';
+$email_from = "$visitor_email.\n";
 $email_subject = "Wiadomość z PORTFOLIO";
 $email_body = "Nowa wiadomość od: $name.\n".
 		"Nazwa firmy: \n $company".
