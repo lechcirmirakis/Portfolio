@@ -1,20 +1,22 @@
+/* Footer */
+
 .footer {
-    background-color: #202020;
-    color: $color_gry;
+  background-color: $contact_bg;
+  color: $color_gry;
 
-    .underline {
-        width: 100%;
-        height: 1px;
-        background-color: $color_gry;
+  .underline {
+    width: 100%;
+    height: 1px;
+    background-color: $color_gry;
+  }
+
+  .footer_content {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $color_yel;
     }
-
-    .footer_content {
-        height: 70px;
-        display: flex;
-        align-items: center;
-
-        span {
-            color: $color_yel;
-        }
-    }
+  }
 }
