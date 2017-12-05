@@ -1,15 +1,17 @@
+/* All */
+
 body {
-    font-family: 'Barlow Condensed', sans-serif;
-    background-color: #e2dfdc;
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: $body_bg;
 }
 
 .half {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .container {
-    width: 100%;
-    max-width: 1140px;
-    padding: 0 40px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 40px;
+  margin: 0 auto;
 }

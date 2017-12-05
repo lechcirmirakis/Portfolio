@@ -1,13 +1,7 @@
 @import "reset";
+@import "modules/colors";
 @import "modules/all";
 @import "modules/animated";
-
-
-$color_yel: #dbd100;
-$color_org: #ca8210;
-$color_blc: #262626;
-$color_gry: #9b9b9b;
-
 @import "modules/imagebox";
 @import "partials/header";
 @import "partials/projects";
