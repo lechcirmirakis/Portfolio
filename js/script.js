@@ -70,7 +70,7 @@ $(document).ready(function() {
         input.next('.statement').text('').removeClass('error').addClass('ok');
       } else {
         input.removeClass('valid').addClass('invalid');
-        input.next('.statement').text('Wiadomość nie może być pusta!').removeClass('ok').addClass('error');
+        input.next('.statement').text('Wiadomość nie może być pusta').removeClass('ok').addClass('error');
       }
     });
 
@@ -82,7 +82,8 @@ $(document).ready(function() {
 
     if (name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')) {
       input.next('.statement').text('').removeClass('error').addClass('ok');
-      alert('Wiadomosc zostala wyslana prawidłowo');
+      alert('Dziękuję za wypełnienie formularza. Skontaktuję się jak najszybciej');
+
     } else {
       event.preventDefault();
       input.next('.statement').text('Jeśli chcesz wysłac formularz, wypełnij wszystkie pola').removeClass('ok').addClass('error');
