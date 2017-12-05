@@ -31,48 +31,49 @@ $(document).ready(function() {
 
   // form validation
 
+  // name input
+  $('#name').on('blur', function() {
+    var input = $(this);
+    var name_length = input.val().length;
+    if (name_length >= 3 && name_length <= 50) {
+      input.removeClass('invalid').addClass('valid');
+      input.next('.statement').text('').removeClass('error').addClass('ok');
+    } else {
+      input.removeClass('valid').addClass('invalid');
+      input.next('.statement').text('Wprowadź poprawne imię i nazwisko.').removeClass('ok').addClass('error');
+    }
+  });
+
+  // email input
+  $('#email').on('blur', function() {
+    var input = $(this);
+    var email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    var is_email = email.test(input.val());
+    if (is_email) {
+      input.removeClass('invalid').addClass('valid');
+      input.next('.statement').text('').removeClass('error').addClass('ok');
+    } else {
+      input.removeClass('valid').addClass('invalid');
+      input.next('.statement').text('Wprowadź prawidłowy adress email.').removeClass('ok').addClass('error');
+    }
+  });
+
+  // message input
+  $('#message').on('blur', function() {
+    var input = $(this);
+    var message = $(this).val();
+    if (message) {
+      input.removeClass('invalid').addClass('valid');
+      input.next('.statement').text('').removeClass('error').addClass('ok');
+    } else {
+      input.removeClass('valid').addClass('invalid');
+      input.next('.statement').text('Wiadomość nie może być pusta').removeClass('ok').addClass('error');
+    }
+  });
+
   //submit button event
 
   $('#submit').click(function() {
-    // name input
-    $('#name').on('blur', function() {
-      var input = $(this);
-      var name_length = input.val().length;
-      if (name_length >= 3 && name_length <= 50) {
-        input.removeClass('invalid').addClass('valid');
-        input.next('.statement').text('').removeClass('error').addClass('ok');
-      } else {
-        input.removeClass('valid').addClass('invalid');
-        input.next('.statement').text('Wprowadź poprawne imię i nazwisko.').removeClass('ok').addClass('error');
-      }
-    });
-
-    // email input
-    $('#email').on('blur', function() {
-      var input = $(this);
-      var email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-      var is_email = email.test(input.val());
-      if (is_email) {
-        input.removeClass('invalid').addClass('valid');
-        input.next('.statement').text('').removeClass('error').addClass('ok');
-      } else {
-        input.removeClass('valid').addClass('invalid');
-        input.next('.statement').text('Wprowadź prawidłowy adress email.').removeClass('ok').addClass('error');
-      }
-    });
-
-    // message input
-    $('#message').on('blur', function() {
-      var input = $(this);
-      var message = $(this).val();
-      if (message) {
-        input.removeClass('invalid').addClass('valid');
-        input.next('.statement').text('').removeClass('error').addClass('ok');
-      } else {
-        input.removeClass('valid').addClass('invalid');
-        input.next('.statement').text('Wiadomość nie może być pusta').removeClass('ok').addClass('error');
-      }
-    });
 
     // validation for submit button
     var name = $('#name');
