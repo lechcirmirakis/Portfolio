@@ -1,0 +1,90 @@
+.header {
+    background-image: url("../images/main_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    min-height: 100vh;
+}
+
+.header_overlay {
+    height: 100vh;
+    min-height: 350px;
+    width: 100%;
+	background-color: rgba(31, 31, 31, 0.65);
+    display: flex;
+    align-items: center;
+    .main_content {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 2.5rem;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 2em;
+            margin-top: 30px;
+            h1 {
+                font-size: 0.7em;
+                margin-bottom: 20px;
+                span {
+                    color: $color_yel;
+                }
+            }
+            .icons {
+                font-size: 0.5em;
+                a,
+                a:focus,
+                a:active,
+                a:visited  {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                a:hover,
+                {
+                    color: $color_yel;
+                }
+                i {
+                    padding: 10px;
+                }
+            }
+            span:nth-child(3) {
+                font-size: 0.3em;
+                margin-top: 50px;
+            }
+            span:nth-child(5) {
+                font-size: 0.6em;
+            }
+        }
+    }
+    .main_buttons {
+        width: 100%;
+        text-align: center;
+        margin-top: 60px;
+
+        .project_btn,
+        .project_btn:focus,
+        .project_btn:active,
+        .project_btn:visited,
+         {
+            color: #fff;
+        	font-size: 0.55em;
+        	background: transparent;
+        	transition: all 500ms;
+        	-webkit-transition: all 500ms;
+        	-moz-transition: all 500ms;
+        	-o-transition: all 500ms;
+            cursor: pointer;
+            padding: 8px 20px 12px;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            text-decoration: none;
+        }
+        .project_btn:hover {
+            color: $color_yel;
+        }
+    }
+}
